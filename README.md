@@ -1,5 +1,7 @@
 ![Exordium](https://raw.github.com/philippe-grenet/exordium/master/doc/Exordium.png)
 
+[Bing]This is forked to add smex and gtag support
+
 # What is this repo
 
 A portable Emacs configuration focused on adding IDE-level features for C++ and
