@@ -65,7 +65,7 @@
   databases. Override this variable for your local environment.")
 
 (defvar rtags-clang-command-suffix
-  " -c -o "
+  " -std=c++1y -c -o "
   "Compilation command suffix to use for creating compilation
   databases. Override this variable for you local environment.")
 

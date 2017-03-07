@@ -644,8 +644,8 @@ Navigation keys:
 
 Keybinding                           | Description
 -------------------------------------|-----------------------------------------
-<kbd>M-.</kbd> or <kbd>C-c r .</kbd> | Jump to symbol definition. With prefix: in other window.
-<kbd>M-,</kbd> or <kbd>C-c r ,</kbd> | Find references to symbol.
+<kbd>C-.</kbd> or <kbd>C-c r .</kbd> | Jump to symbol definition. With prefix: in other window.
+<kbd>C-,</kbd> or <kbd>C-c r ,</kbd> | Find references to symbol.
 <kbd>C-c r &gt;</kbd>                | Find symbol (prompts for symbol name).
 <kbd>C-c r &lt;</kbd>                | Find references (prompts for symbol name).
 <kbd>C-c r v</kbd>                   | Find all implementations of virtual function.

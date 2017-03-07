@@ -1,4 +1,4 @@
-;;;;  ___      __   __   __
+                                                    ;;;;  ___      __   __   __
 ;;;; |__  \_/ /  \ |__) |  \ | |  |  |\/|
 ;;;; |___ / \ \__/ |  \ |__/ | \__/  |  |
 ;;;;
@@ -366,6 +366,10 @@ the .elc exists. Also discard .elc without corresponding .el"
 (require 'init-helm-gtags)
 
 (require 'init-keymap)
+
+;;using esc to end entering
+(global-set-key (kbd "<escape>") 'keyboard-quit)
+
 ;;; Greetings
 (setq initial-scratch-message
       (let ((current-user (split-string (user-full-name) " ")))
