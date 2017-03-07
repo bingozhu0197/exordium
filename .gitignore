@@ -43,3 +43,6 @@ extensions/*.elc
 
 # Taps
 taps/**
+
+#smex history
+smex-items

@@ -358,6 +358,14 @@ the .elc exists. Also discard .elc without corresponding .el"
 
 (update-progress-bar)
 
+(require 'helm-smex)
+(global-set-key [remap execute-extended-command] #'helm-smex)
+(global-set-key (kbd "M-X") #'helm-smex-major-mode-commands)
+
+;; Enable helm-gtags-mode
+(require 'init-helm-gtags)
+
+(require 'init-keymap)
 ;;; Greetings
 (setq initial-scratch-message
       (let ((current-user (split-string (user-full-name) " ")))
