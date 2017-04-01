@@ -369,8 +369,29 @@ the .elc exists. Also discard .elc without corresponding .el"
 
 (require 'init-keymap)
 
+;;(defun trunk-locate ()
+;;    "locate files in trunk directory"
+;;  (interactive)
+;;  (setq current-prefix-arg '("/home/binbzhu/locatedb/trunk.db"))
+;;  (call-interactively 'helm-locate))
+
+;;setup gud to center code line
+(defadvice gud-display-line (after gud-display-line-centered activate)
+  "Center the line in the window"
+  (when (and gud-overlay-arrow-position gdb-source-window)
+    (with-selected-window gdb-source-window
+      ; (marker-buffer gud-overlay-arrow-position)
+      (save-restriction
+        (goto-line (ad-get-arg 1))
+        (recenter)))))
+
+(defun jpk/locate-make-command-line (str)
+  (list locate-command "-d" "/home/binbzhu/locatedb/trunk.db" str))
+(setq locate-make-command-line 'jpk/locate-make-command-line)
 ;;using esc to end entering
-(global-set-key (kbd "<escape>") 'keyboard-quit)
+;;(global-set-key (kbd "<escape>") 'keyboard-quit)
+
+(setq-default c-basic-offset 4)
 
 ;;; Greetings
 (setq initial-scratch-message
