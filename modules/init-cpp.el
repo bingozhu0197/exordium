@@ -92,7 +92,7 @@
       (cond (matching-ext
              (unless
                  (catch 'found
-                   (flet ((when-exists-find-and-throw
+                   (cl-flet ((when-exists-find-and-throw
                            (file)
                            (when (file-exists-p file)
                              (find-file file)

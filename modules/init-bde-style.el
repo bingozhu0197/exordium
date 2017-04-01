@@ -195,7 +195,7 @@ switch(val) {
   (save-excursion
     (goto-char (c-langelem-pos element))
     (if (looking-at "\\(case\\|default\\)")
-        '*
+        '+
       '+)))
 
 ;; See http://cc-mode.sourceforge.net/html-manual/Syntactic-Symbols.html#Syntactic-Symbols
@@ -215,8 +215,8 @@ switch(val) {
     (substatement-label    . 0)
     (label                 . 0)
     (access-label          . /)
-    (case-label            . *)
-    (statement-case-intro  . *)
+    (case-label            . +)
+    (statement-case-intro  . +)
     (statement-case-open   . 0)
     (statement-cont        . +)
     (inline-open           . 0)

@@ -375,16 +375,6 @@ the .elc exists. Also discard .elc without corresponding .el"
 ;;  (setq current-prefix-arg '("/home/binbzhu/locatedb/trunk.db"))
 ;;  (call-interactively 'helm-locate))
 
-;;setup gud to center code line
-(defadvice gud-display-line (after gud-display-line-centered activate)
-  "Center the line in the window"
-  (when (and gud-overlay-arrow-position gdb-source-window)
-    (with-selected-window gdb-source-window
-      ; (marker-buffer gud-overlay-arrow-position)
-      (save-restriction
-        (goto-line (ad-get-arg 1))
-        (recenter)))))
-
 (defun jpk/locate-make-command-line (str)
   (list locate-command "-d" "/home/binbzhu/locatedb/trunk.db" str))
 (setq locate-make-command-line 'jpk/locate-make-command-line)
