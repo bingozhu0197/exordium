@@ -14,6 +14,9 @@
     (define-key helm-gtags-mode-map (kbd "M-g M-p") 'helm-gtags-parse-file)
     (define-key helm-gtags-mode-map (kbd "C-c [") 'helm-gtags-previous-history)
     (define-key helm-gtags-mode-map (kbd "C-c ]") 'helm-gtags-next-history)
-    (define-key helm-gtags-mode-map (kbd "M-p") 'helm-gtags-pop-stack)))
+    (define-key helm-gtags-mode-map (kbd "M-p") 'helm-gtags-pop-stack)
+    (define-key helm-gtags-mode-map (kbd "C-c f") 'helm-gtags-find-files)
+    (define-key helm-gtags-mode-map (kbd "C-c /") 'helm-gtags-dwim)))
+
 
 (provide 'init-helm-gtags)
