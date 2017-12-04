@@ -5,7 +5,10 @@
 (add-hook 'c++-mode-hook 'helm-gtags-mode)
 (add-hook 'asm-mode-hook 'helm-gtags-mode)
 
-;; Set key bindings
+(setq
+ helm-gtags-auto-update t
+)
+ ;; Set key bindings
 (eval-after-load "helm-gtags"
   '(progn
     (define-key helm-gtags-mode-map (kbd "C-c .") 'helm-gtags-find-tag)

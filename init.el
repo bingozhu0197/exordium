@@ -377,6 +377,7 @@ the .elc exists. Also discard .elc without corresponding .el"
 ;;  (interactive)
 ;;  (setq current-prefix-arg '("/home/binbzhu/locatedb/trunk.db"))
 ;;  (call-interactively 'helm-locate))
+(setq find-grep-options "-q -i")
 
 (defun jpk/locate-make-command-line (str)
   (list locate-command "-d" "/home/binbzhu/locatedb/trunk.db" str))
@@ -385,6 +386,30 @@ the .elc exists. Also discard .elc without corresponding .el"
 ;;(global-set-key (kbd "<escape>") 'keyboard-quit)
 
 (setq-default c-basic-offset 4)
+
+(global-set-key (kbd "C-c l") 'helm-locate)
+;;(defun insert_cplane_header
+;;    ())
+(defun copy-path-file-name-to-clipboard ()
+  "Copy the current buffer file name to the clipboard."
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (kill-new filename)
+      (message "Copied buffer file name '%s' to the clipboard." filename))))
+
+(defun copy-file-name-to-clipboard ()
+  "Copy the current buffer file name to the clipboard."
+  (interactive)
+  (let ((filename (file-name-nondirectory
+                  (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name)))))
+    (when filename
+      (kill-new filename)
+      (message "Copied buffer file name '%s' to the clipboard." filename))))
 
 ;;; Greetings
 (setq initial-scratch-message

@@ -214,7 +214,7 @@ switch(val) {
     (substatement-open     . 0)
     (substatement-label    . 0)
     (label                 . 0)
-    (access-label          . /)
+    (access-label          . -)
     (case-label            . +)
     (statement-case-intro  . +)
     (statement-case-open   . 0)
@@ -224,7 +224,7 @@ switch(val) {
     (innamespace           . 0)
     (member-init-intro     . 0)
     (extern-lang-open      . 0)
-    (brace-list-entry      . /)
+    (brace-list-entry      . 0)
     (extern-lang-close     . 0))))
 
 (setq c-default-style
